@@ -1,0 +1,211 @@
+[{
+    "id": 1,
+    "imagen": "/img/libro-1.webp",
+    "nombre": "Derecho de imagen y sponsoreo en el deporte",
+    "precio": 11150,
+    "stock": 5
+},
+{
+    "id": 2,
+    "imagen": "/img/libro-2.webp",
+    "nombre": "Legislación Policial Penal",
+    "precio": 12500,
+    "stock": 5
+},
+{
+    "id": 3,
+    "imagen": "/img/libro-3.webp",
+    "nombre": "Cuantificando Daños",
+    "precio": 12150,
+    "stock": 5
+},
+{
+    "id": 4,
+    "imagen": "/img/libro-4.webp",
+    "nombre": "La Construcción del Escrito Jurídico",
+    "precio": 14150,
+    "stock": 5
+},
+{
+    "id": 5,
+    "imagen": "/img/libro-5.webp",
+    "nombre": "Derecho Procesal Electronico",
+    "precio": 14650,
+    "stock": 5
+},
+{
+    "id": 6,
+    "imagen": "/img/libro-6.webp",
+    "nombre": "Liquidación y Partición del Régimen de Bienes en el Matrimonio",
+    "precio": 9250,
+    "stock": 5
+},
+{
+    "id": 7,
+    "imagen": "/img/libro-7.webp",
+    "nombre": "Tratado Práctico De Derecho Del Trabajo",
+    "precio": 25750,
+    "stock": 5
+},
+{
+    "id": 8,
+    "imagen": "/img/libro-8.webp",
+    "nombre": "Amparos En Salud y Discapacidad",
+    "precio": 10250,
+    "stock": 5
+},
+{
+    "id": 9,
+    "imagen": "/img/libro-9.webp",
+    "nombre": "Código Procesal Civil y Comercial de la Nación",
+    "precio": 8500,
+    "stock": 5
+},
+{
+    "id": 10,
+    "imagen": "/img/libro-10.webp",
+    "nombre": "Código Procesal Penal de la Nación",
+    "precio": 3000,
+    "stock": 5
+},
+{
+    "id": 11,
+    "imagen": "/img/libro-11.webp",
+    "nombre": "Código Civil y Comercial de la Nación - Tomo 5",
+    "precio": 14100,
+    "stock": 5
+},
+{
+    "id": 12,
+    "imagen": "/img/libro-12.webp",
+    "nombre": "Codigo Procesal Civil y Comercial",
+    "precio": 8500,
+    "stock": 5
+},
+{
+    "id": 13,
+    "imagen": "/img/libro-13.webp",
+    "nombre": "Control de Constitucionalidad y de Convencionalidad",
+    "precio": 33000,
+    "stock": 5
+},
+{
+    "id": 14,
+    "imagen": "/img/libro-14.webp",
+    "nombre": "Código Civil y Comercial de la Nación - Tomo 1",
+    "precio": 14100,
+    "stock": 5
+},
+{
+    "id": 15,
+    "imagen": "/img/libro-15.webp",
+    "nombre": "Código Civil y Comercial de la Nación - Tomo 2",
+    "precio": 17000,
+    "stock": 5
+},
+{
+    "id": 16,
+    "imagen": "/img/libro-16.webp",
+    "nombre": "Código Civil y Comercial de la Nación - Tomo 3",
+    "precio": 16600,
+    "stock": 5
+},
+{
+    "id": 17,
+    "imagen": "/img/libro-17.webp",
+    "nombre": "Código Civil y Comercial de la Nación - Tomo 4",
+    "precio": 16200,
+    "stock": 5
+},
+{
+    "id": 18,
+    "imagen": "/img/libro-18.webp",
+    "nombre": "500 Modelos de Escritos Judiciales",
+    "precio": 12450,
+    "stock": 5
+},
+{
+    "id": 19,
+    "imagen": "/img/libro-19.webp",
+    "nombre": "Práctica del Juicio Ejecutivo",
+    "precio": 12450,
+    "stock": 5
+},
+{
+    "id": 20,
+    "imagen": "/img/libro-20.webp",
+    "nombre": "Cálculo de Indemnizaciones Laborales",
+    "precio": 9990,
+    "stock": 5
+},
+{
+    "id": 21,
+    "imagen": "/img/libro-21.webp",
+    "nombre": "Nueva Práctica de Alquileres",
+    "precio": 9650,
+    "stock": 5
+},
+{
+    "id": 22,
+    "imagen": "/img/libro-22.webp",
+    "nombre": "Determinación y Cuantificación del Daño",
+    "precio": 12150,
+    "stock": 5
+},
+{
+    "id": 23,
+    "imagen": "/img/libro-23.webp",
+    "nombre": "Teoría y Practica del Amparo",
+    "precio": 10950,
+    "stock": 5
+},
+{
+    "id": 24,
+    "imagen": "/img/libro-24.webp",
+    "nombre": "Derecho Sucesorio",
+    "precio": 9990,
+    "stock": 5
+},
+{
+    "id": 25,
+    "imagen": "/img/libro-25.webp",
+    "nombre": "Contratos Inmobiliarios",
+    "precio": 10150,
+    "stock": 5
+},
+{
+    "id": 26,
+    "imagen": "/img/libro-26.webp",
+    "nombre": "Reclamos de Daños en el Matrimonio y Uniones Convencionales",
+    "precio": 10750,
+    "stock": 5
+},
+{
+    "id": 27,
+    "imagen": "/img/libro-27.webp",
+    "nombre": "Recursos Administrativos en el Empleo Público",
+    "precio": 8750,
+    "stock": 5
+},
+{
+    "id": 28,
+    "imagen": "/img/libro-28.webp",
+    "nombre": "Derecho Administrativo",
+    "precio": 54500,
+    "stock": 5
+},
+{
+    "id": 29,
+    "imagen": "/img/libro-29.webp",
+    "nombre": "Manual del Impuesto a las Ganancias",
+    "precio": 19540,
+    "stock": 5
+},
+{
+    "id": 30,
+    "imagen": "/img/libro-30.webp",
+    "nombre": "Derecho Ambiental",
+    "precio": 16200,
+    "stock": 5
+}
+]

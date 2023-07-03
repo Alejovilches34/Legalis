@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./img/book icon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <title>Editorial Legalis</title>
+</head>
+
+<body>
+     <header class="navbar">
+    <nav>
+       <div class="navbar_container">
+        <div class="logo">
+          <a class="navbar_brand" href="./index.html">
+            <img src="./img/Logo navbar.png" width="70px" alt="logo.libreria" class="imagen">
+            <span>Editorial Legalis</span></a>
+        </div>      
+        <ul class="navbar_links">
+        <li class="navbar_link"><a href="./catalogo.html">Catalogo</a></li>
+        <li class="navbar_link"><a href="./Como comprar.html">Como comprar</a></li>
+        <li class="navbar_link"><a href="./Contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+       <div class="navbar_main"></div>
+          <a href="#" id="cart_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cart">                    
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/>
+            </svg>
+            <span id="contador">0</span>
+          </a>
+    </nav>
+  </header>
+  <main>
+    <div class="contenido">
+      <div class="filters">
+        <div class="filters__filter">
+        <label for="price">Precio desde:</label>
+        <input type="range" class="filter--range" min="0" id="price" max="15000">
+        <span></span>
+        </div>
+        <div class="filters__filter">
+        <p style="font-size: 17px; margin-block-start: 14px;">Precio Descendente</p>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+            <div class="slider__card">
+                <span class="slider__card--face" id="boton__orden"></span>
+            </div>
+        </label>
+        </div>
+      </div>
+    <div class="tarjetas"></div>
+    <div class="modal" id="cart-modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Carrito de compras</h2>
+        <div class="contenedor_compras">
+          <div class="tbody">
+            <div class="columna_1">
+              <img src="/img/libro-1.webp" alt="" class="img_cart">
+            </div>
+            <div class="columna_2">
+              Nombre del producto
+            </div>
+            <div class="columna_3">
+              <input type="number">
+            </div>
+            <div class="columna_4">
+              Precio
+            </div>
+            <div>
+              <button>X</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  </main>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="./js/app.js" type="module"></script>
+</body>
+
+</html>
