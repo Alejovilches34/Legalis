@@ -1,19 +1,18 @@
-// Obtener elementos del DOM
 const cartIcon = document.getElementById("cart_icon");
 const modal = document.getElementById("cart-modal");
 const closeButton = document.getElementsByClassName("close")[0];
 
-// Abrir el modal cuando se hace clic en el icono del carrito
+// Abrir el carrito
 cartIcon.addEventListener("click", function() {
   modal.style.display = "block";
 });
 
-// Cerrar el modal cuando se hace clic en el botón de cerrar
+// Cerrar el carrito
 closeButton.addEventListener("click", function() {
   modal.style.display = "none";
 });
 
-// Cerrar el modal cuando se hace clic fuera del contenido del modal
+// Cerrar el carrito cuando se hace clic fuera 
 window.addEventListener("click", function(event) {
   if (event.target === modal) {
     modal.style.display = "none";
@@ -53,42 +52,42 @@ const renderizarProductos = (PRODUCTOS) => {
 
     PRODUCTOS.forEach(producto => {
 
-        // Creacion de un div
+        // Crea div
         const $div = document.createElement('div');
         $div.classList.add('tarjeta');
 
-        // Creacion de un img
+        // Crea img
         const $img = document.createElement('img');
         $img.src = producto.imagen;
         $img.classList.add('card_img')
 
-        // Creacion de un h3
+        // Crea titulo
         const $h3 = document.createElement('h4');
         $h3.textContent = producto.nombre;
 
-        // Creacion de un div
+        // Crea boton cont
         const $div2 = document.createElement('div');
         $div2.classList.add('button-container');
 
-        // Creacion de un p
+        // Crea precio
         const $p = document.createElement('p');
         $p.textContent = "$" + producto.precio;
         $p.classList.add('card_price')
 
-        // Creacion de un button
+        // Crea boton de agregar
         const $button = document.createElement('button');
         $button.textContent = 'Agregar al carrito';
 
-        // Agregar el h3 al div
+        // Agregar titulo div
         $div.appendChild($h3);
 
-        // Agregar el img al div
+        // Agregar img al div
         $div.appendChild($img);
 
-        // Agregar el p al div2
+        // Agregar precio al div2
         $div2.appendChild($p);
 
-        // Agregar el button al div2
+        // Agregar boton al div2
         $div2.appendChild($button);
 
         // Agregar el div2 al div
@@ -97,7 +96,7 @@ const renderizarProductos = (PRODUCTOS) => {
         // Agregar el div al contenedor
         $tarjetas.appendChild($div);
 
-        // Agregar un evento al button
+        // Boton
         $button.addEventListener('click', () => {
             console.log('Agregar al carrito');
             agregarAlCarrito(producto);
@@ -105,18 +104,14 @@ const renderizarProductos = (PRODUCTOS) => {
     });
 }
 
-//////////////////////////////////////////
 
 const agregarAlCarrito = (producto) => {
     // Verificar si el producto ya está en el carrito
     const productoEnCarrito = CARRITO.find(item => item.id === producto.id);
 
     if (productoEnCarrito) {
-        // Si el producto ya está en el carrito, aumentamos la cantidad
-        productoEnCarrito.cantidad++;
-        
+        productoEnCarrito.cantidad++;      
     } else {
-        // Si el producto no está en el carrito, lo agregamos
         CARRITO.push({
             id: producto.id,
             nombre: producto.nombre,
@@ -126,104 +121,71 @@ const agregarAlCarrito = (producto) => {
         });
     }
 
-    // Calcular la cantidad total de productos en el carrito
     const totalCantidad = CARRITO.reduce((total, item) => total + item.cantidad, 0);
     $carrito.textContent = totalCantidad;
 
     toastify("Producto agregado al carrito", "success");
 
-    // Renderizar el carrito
     renderizarCarrito();
-
-    // Guardar el carrito en el local storage
     guardarCarritoEnLocalStorage();
 }
 
 
-
-//////////////////////////////////////////
-
-
-
-// Creacion de la funcion que se encargue de renderizar el carrito
 const renderizarCarrito = () => {
     // Seleccionar el contenedor del carrito
     const $contenedorCarrito = document.querySelector('.contenedor_compras');
-
-    // Limpiar el html del contenedor
     $contenedorCarrito.innerHTML = '';
 
-    // Recorrer el carrito
     CARRITO.forEach(producto => {
-        // Creacion de un div con la clase tbody
         const $div = document.createElement('div');
         $div.classList.add('tbody');
 
-        // Creacion de un div con la clase columna_1
         const $div2 = document.createElement('div');
         $div2.classList.add('columna_1');
 
-        // Creacion de un img
         const $img = document.createElement('img');
         $img.classList.add('img_cart');
         $img.src = producto.imagen;
 
-        // Agregar el img al div2
         $div2.appendChild($img);
-
-        // Agregar el div2 al div
         $div.appendChild($div2);
 
-        // Creacion de un div con la clase columna_2
         const $div3 = document.createElement('div');
         $div3.classList.add('columna_2');
         $div3.textContent = producto.nombre;
 
-        // Agregar el div3 al div
         $div.appendChild($div3);
 
-        // Creacion de un div con la clase columna_3
         const $div4 = document.createElement('div');
         $div4.classList.add('columna_3');
 
-        // creacion de input numerico para la cantidad
         const $input = document.createElement('input');
         $input.type = 'number';
         $input.value = producto.cantidad;
 
-        // Agregar el input al div4
         $div4.appendChild($input);
 
-        // Agregar el div4 al div
         $div.appendChild($div4);
 
-        // Creacion de un div con la clase columna_4
         const $div5 = document.createElement('div');
         $div5.classList.add('columna_4');
         $div5.textContent = `$ ${producto.precio * producto.cantidad}`;
 
-        // Agregar el div5 al div
         $div.appendChild($div5);
 
-        // Creacion de un div con la clase columna_5
         const $div6 = document.createElement('div');
         $div6.classList.add('columna_5');
 
-        // Creacion de un button
         const $button = document.createElement('button');
         $button.classList.add('btn_cart')
         $button.textContent = 'X';
 
-        // Agregar el button al div6
         $div6.appendChild($button);
 
-        // Agregar el div6 al div
         $div.appendChild($div6);
 
-        // Agregar el div al contenedor
         $contenedorCarrito.appendChild($div);
 
-        // Agregar un evento al button
         $button.addEventListener('click', () => {
             eliminarProducto(producto.id);
             const totalCantidad = CARRITO.reduce((total, item) => total + item.cantidad, 0);
@@ -231,13 +193,11 @@ const renderizarCarrito = () => {
 
         });
 
-        // Agregar un evento al input que agregue un producto al carrito
         $input.addEventListener('change', () => {
             console.log('Cambiar cantidad');
             cambiarCantidad(producto.id, +($input.value));
             totalIndividual(producto.id, producto.precio, +($input.value));
     
-            // Calcular la cantidad total de productos en el carrito
             const totalCantidad = CARRITO.reduce((total, item) => total + item.cantidad, 0);
             $carrito.textContent = totalCantidad;
             toastify("Cantidad cambiada", "success");
@@ -247,9 +207,7 @@ const renderizarCarrito = () => {
 }
 
 
-
 const totalIndividual = (id, precio, cantidad) => {
-    // Buscar el producto en el carrito
     const producto = CARRITO.find(producto => producto.id === id);
 
     // Verificar si la cantidad es mayor a 0
@@ -261,10 +219,8 @@ const totalIndividual = (id, precio, cantidad) => {
         eliminarProducto(id);
     }
 
-    // Renderizar el carrito
     renderizarCarrito();
 
-    // Guardar el carrito en el local storage
     guardarCarritoEnLocalStorage();
 
 }
@@ -274,11 +230,9 @@ const eliminarProducto = (id) => {
     CARRITO = CARRITO.filter(producto => producto.id !== id);
 
     toastify("Producto eliminado del carrito", "error")
-    // Renderizar el carrito
     renderizarCarrito();
-    // guardar el carrito en el local storage
     guardarCarritoEnLocalStorage();
-    // Calcular la cantidad total de productos en el carrito
+
     const totalCantidad = CARRITO.reduce((total, item) => total + item.cantidad, 0);
     $carrito.textContent = totalCantidad;
 }
@@ -286,7 +240,6 @@ const eliminarProducto = (id) => {
 // Creacion de la funcion que se encargue de eliminar un producto 
 // del carrito pero de manera individual
 const eliminarProductoIndividual = (id) => {
-    // Buscar el producto en el carrito
     const producto = CARRITO.find(producto => producto.id === id);
 
     // Verificar si la cantidad es mayor a 1
@@ -298,9 +251,8 @@ const eliminarProductoIndividual = (id) => {
         eliminarProducto(id);
     }
 
-    // Renderizar el carrito
     renderizarCarrito();
-    // guardar el carrito en el local storage
+
     guardarCarritoEnLocalStorage();
 }
 
@@ -317,19 +269,14 @@ const cambiarCantidad = (id, cantidad) => {
     guardarCarritoEnLocalStorage();
 }
 
-// Funcion para guardar el carrito en el local storage
 const guardarCarritoEnLocalStorage = () => {
     localStorage.setItem('carrito', JSON.stringify(CARRITO));
 }
 
-// Funcion para obtener el carrito del local storage
 const obtenerCarritoDelLocalStorage = () => {
-    // Verificar si existe el carrito en el local storage
     if (localStorage.getItem('carrito')) {
-        // Si existe, lo obtenemos
         CARRITO = JSON.parse(localStorage.getItem('carrito'));
     }else {
-        // Si no existe, inicializamos el carrito
         CARRITO = [];
     }
 }
@@ -341,9 +288,9 @@ function toastify(mensaje) {
         text: mensaje,
         duration: 3000,
         newWindow: true,
-        gravity: "top", // `top` or `bottom`
+        gravity: "top", 
         position:'center',
-        stopOnFocus: true, // Prevents dismissing of toast on hover
+        stopOnFocus: true, 
         style: {
             fontfamily: 'Bitter',
             padding: '6px 10px',
@@ -353,6 +300,6 @@ function toastify(mensaje) {
             color: '#fff',
             margin: '100px 10px',
         },
-        onClick: function () { } // Callback after click
+        onClick: function () { }
     }).showToast();
 }
