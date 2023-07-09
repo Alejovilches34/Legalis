@@ -2,6 +2,19 @@ const cartIcon = document.getElementById("cart_icon");
 const modal = document.getElementById("cart-modal");
 const closeButton = document.getElementsByClassName("close")[0];
 
+//priceRange
+
+const priceRangeInput = document.getElementById("price");
+const priceRangeSpan = document.getElementById("priceRange");
+
+
+priceRangeInput.addEventListener("input", function() {
+    var price = "$" + priceRangeInput.value;
+    priceRangeSpan.textContent = price;
+  });
+
+  priceRangeInput.dispatchEvent(new Event("input"));
+  
 // Abrir el carrito
 cartIcon.addEventListener("click", function() {
   modal.style.display = "block";
