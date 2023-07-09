@@ -281,25 +281,26 @@ const obtenerCarritoDelLocalStorage = () => {
     }
 }
 
-export { renderizarProductos };
+
 
 function toastify(mensaje) {
     Toastify({
         text: mensaje,
-        duration: 3000,
+        duration: 2000,
         newWindow: true,
         gravity: "top", 
-        position:'center',
+        position: "right",
         stopOnFocus: true, 
         style: {
             fontfamily: 'Bitter',
-            padding: '6px 10px',
+            padding: '6px 20px',
             borderRadius: '30px',
-            border: '1.5px solid transparent',
+            border: "1.5px solid trasnparent",
             background: '#2b6fec',
             color: '#fff',
-            margin: '100px 10px',
+            margin: '100px 0 0 660px',
         },
-        onClick: function () { }
+        onclick: function () {}
     }).showToast();
 }
+

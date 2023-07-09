@@ -196,6 +196,14 @@ nav ul li a {
   align-items: center;
 }
 
+.novedades_cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+}
+
 .visitanos{
   display: flex;
   flex-direction: column;
@@ -481,15 +489,6 @@ p{
     margin-top: 1rem;
     font-weight: 500;
 }
-
-.tema{
-    border-bottom: 1px dotted #c6c6c6;
-    color: #2a38be;
-    font-size: 24px;
-    margin: 20px 0;
-    padding: 0 0 10px;
-}
-
 
   .compra__g{
     width: auto;
