@@ -34,7 +34,7 @@ window.addEventListener("click", function(event) {
 
 const getProductos = async() => {
     try {
-        const res = await fetch('/libros.json');
+        const res = await fetch('./libros.json');
         const data = await res.json();
         
         renderizarProductos(data);
